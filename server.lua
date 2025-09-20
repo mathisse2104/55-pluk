@@ -17,12 +17,12 @@ CreateThread(function()
     end
 end)
 
-ESX.RegisterServerCallback('exios-drugsfarm:server:cb:get:Shared', function(src, cb)
+ESX.RegisterServerCallback('55-drugsfarm:server:cb:get:Shared', function(src, cb)
     cb(Shared)
 end)
 
-RegisterNetEvent('exios-drugsfarm:server:pickubOject')
-AddEventHandler('exios-drugsfarm:server:pickubOject', function(entity, objectType)
+RegisterNetEvent('55-drugsfarm:server:pickubOject')
+AddEventHandler('55-drugsfarm:server:pickubOject', function(entity, objectType)
     if not Shared or not Shared.Settings[objectType] then 
         return 
     end
