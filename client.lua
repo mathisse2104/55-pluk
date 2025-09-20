@@ -1,5 +1,3 @@
--- exios-drugsfarm client.lua - Fixed version
-
 DRM = { ['Functions'] = {}, ['Data'] = {} }
 
 local SharedMessageSent, activeEntity, isInteracting = false, nil, false
@@ -63,15 +61,15 @@ local function setupOxTargetForCurrentLocation()
                     end
                 end,
                 onSelect = function(data)
-                    TriggerEvent('exios-drugsfarm:client:pickupObject', data, objectType)
+                    TriggerEvent('55-drugsfarm:client:pickupObject', data, objectType)
                 end
             },
         })
     end
 end
 
-RegisterNetEvent('exios-drugsfarm:client:setActiveLocation')
-AddEventHandler('exios-drugsfarm:client:setActiveLocation', function(index)
+RegisterNetEvent('55-drugsfarm:client:setActiveLocation')
+AddEventHandler('55-drugsfarm:client:setActiveLocation', function(index)
     
     if not Shared or not Shared.Config or not Shared.Config.Locations then
         return
